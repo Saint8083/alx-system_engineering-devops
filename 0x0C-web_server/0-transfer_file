@@ -6,7 +6,6 @@ then
   exit 1
 fi
 
-# Assigning Arguments to variables
 
 path_to_file=$1
 ip=$2
@@ -14,10 +13,8 @@ username=$3
 path_to_ssh_key=$4
 
 
-# Disabbling Strict Host Key checking
 scp -o "StrictHostKeyChecking no" -i "$path_to_ssh_key" "$path_to_file" "$username@$ip:~/"
 
-# Checking if the transfer was successful
 if [ $? -eq 0 ]
 then
   echo "FILE TRANSFER WAS SUCCESSFULL"
