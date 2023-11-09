@@ -8,6 +8,7 @@ import requests
 
 
 def add_title(dictionary, hot_posts):
+    """ Adds item into a list """
     if len(hot_posts) == 0:
         return
 
