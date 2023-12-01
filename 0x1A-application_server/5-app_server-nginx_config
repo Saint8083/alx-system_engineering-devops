@@ -42,10 +42,4 @@ server {
                 root /var/www/html;
                 internal;
         }
-        root /var/www/example.com;
-        index index.html;
-
-        location / {
-                try_files $uri $uri/ =404;
-        }
 }
